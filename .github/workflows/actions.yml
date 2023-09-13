@@ -1,4 +1,4 @@
-name: Build C/C++ CI
+name: Build C++
 
 on:
   push:
@@ -18,6 +18,6 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - uses: actions.checkout@v3
+      - uses: actions/checkout@v3
       - name: Build project
         run: g++ main.cpp -std=c++17 -o CICD
